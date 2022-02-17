@@ -1,19 +1,9 @@
-# Coleganet-Install-Mining-Pool-Software UBUNTU 18.04
+# Coleganet-Install-Mining-Pool-Software UBUNTU 20.04
 Install and Build Mining Pool for Any Cryptocurrency Altcoins and Algorithms on Yiimp (Multi Coins/Algo Mining Pool Software)
 ----------------
+That is the install scrypt in a docker container you can download the docker or just install your self
+No Mysql is include in this install scrypt the latest is in the second docker container 
 
-We provide altcoin cryptocurrencies mining pool installation and creation services and you just sit back and let us take care of everything from scratch to finish that includes but not limited to 
-
-- Installation of your choice of cryptocurrency wallets/daemon for mining purpose
-- Setting up, configuring, administer and prepare server for yiiimp mining software to enable mining for your choice of coins
-- Whether you want a solo, private mining pool for personal mining or a mining pool to share with your friends or public
-- You can set any fees of your choice or set zero fees that can always be changed as per your desire
-- You can use your own equipment to mine such as CPUs, GPU rigs, ASIC machines or even pool can be made compatiable for **Nicehash** mining if you want to use their hashpower.
-- It can be multiple coin and multi algorithms mining pool as more coins can be added at any stage provided those algo/coins are are supported by the software and your pool server.
-- We do privide maintence service although not much maintence is needed after pool is setup, if you do not touch any exisitng settings etc.
-- Configuration, troubleshooting of servers Linux/Ubuntu and existing pools, such as reject blocks, payouts not working, custom difficulty, vardiff, autoexchange, daemon and any other yiimp pool problems we can fix and make your pool running for smooth mining.
-- Optimize and Tweak server and yiimp software for improved performance.
-- Any special features or customization also possible at additional cost.
 
 How Does it Work?
 ----------
@@ -23,25 +13,9 @@ USE THIS SCRIPT ON FRESH INSTALL UBUNTU Server 16.04 / 18.04 !
 
 Connect on your VPS =>
 Coleganet use a new theme and add mysql management inside the administration 
-phpMyEdit-5.7.1.tar.gz
-
 apt upgrade
-reboot
-adduser pool (pool it's just an example...)
-adduser pool sudo
-su - pool
-sudo apt -y install git
-git clone https://github.com/xavatar/yiimp_install_scrypt.git
-cd yiimp_install_scrypt/
-bash install.sh (DO NOT RUN THE SCRIPT AS ROOT or SUDO)
-At the end, you MUST REBOOT to finalize installation...
-Finish !
 
-Go http://xxx.xxx.xxx.xxx or https://xxx.xxx.xxx.xxx (if you have chosen LetsEncrypt SSL). Enjoy !
-Go http://xxx.xxx.xxx.xxx/AdminPanel or https://xxx.xxx.xxx.xxx/AdminPanel to access Panel Admin
-If you are issue after installation (nginx,mariadb... not found), use this script : bash install-debug.sh (watch the log during installation)
-
-‼️ Kudaraidee Install Script :
+‼️ Kudaraidee Install Sources :
 Instead Tpruvot's Yiimp, you can use the Kudaraidee's Repo Yiimp : git clone -b Kudaraidee https://github.com/Kudaraidee/yiimp.git
 It's an updated Yiimp, with more algo, some fix....
 ‼️ YOU MUST UPDATE THE FOLLOWING FILES :
@@ -57,8 +31,9 @@ Are you using a subdomain (mypoolx11.crypto.com)
 Enter support email
 Set stratum to AutoExchange
 Your Public IP for admin access (Put your PERSONNAL IP, NOT IP of your VPS)
-Install Fail2ban
-Install UFW and configure ports
+Say NO to this two OPtions if you are using docker
+Install Fail2ban NO
+Install UFW and configure ports NO
 Install LetsEncrypt SSL
 This install script will get you 95% ready to go with yiimp. There are a few things you need to do after the main install is finished.
 
