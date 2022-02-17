@@ -64,7 +64,7 @@ output "To login with this user :sudo su - pool"
     # update package and upgrade Ubuntu
     sudo apt-get -y update
     sudo apt-get -y autoremove
-    sudo apt install --assume-yes gcc-7.5 shc
+    sudo apt install --assume-yes gcc-7 shc
     sudo apt-get install gcc-7
     output " "
     output "Switching to Aptitude"
@@ -148,7 +148,7 @@ apt install php7.3-common php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-curl php7
 
 sudo apt install build-essential linux-headers-$(uname -r) dkms
 sudo apt install arj bzip2 lhasa lzip p7zip p7zip-full p7zip-rar rar unace unrar unrar-free unzip xz-utils zip zoo
-sudo apt install autoconf automake autotools-dev build-essential byobu  g++ gcc gcc-7.5 g++-7.5 git git-core libboost-dev libboost-all-dev libcrypto++-dev libcurl3  libdb-dev libdb++-dev libevent-dev libgmp-dev libgmp3-dev libhwloc-dev libjansson-dev libmicrohttpd-dev libminiupnpc-dev libncurses5-dev libprotobuf-dev libqrencode-dev libqt5gui5 libqtcore4 libqt5dbus5 libstdc++6 libssl-dev libusb-1.0-0-dev libtool libudev-dev make ocl-icd-opencl-dev openssl pkg-config protobuf-compiler qrencode qttools5-dev qttools5-dev-tools
+sudo apt install autoconf automake autotools-dev build-essential byobu  g++ gcc gcc-7 g++-7 git git-core libboost-dev libboost-all-dev libcrypto++-dev libcurl3  libdb-dev libdb++-dev libevent-dev libgmp-dev libgmp3-dev libhwloc-dev libjansson-dev libmicrohttpd-dev libminiupnpc-dev libncurses5-dev libprotobuf-dev libqrencode-dev libqt5gui5 libqtcore4 libqt5dbus5 libstdc++6 libssl-dev libusb-1.0-0-dev libtool libudev-dev make ocl-icd-opencl-dev openssl pkg-config protobuf-compiler qrencode qttools5-dev qttools5-dev-tools
 sudo apt install libdb++-dev libdb5.3++ libdb5.3++-dev
 sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
@@ -287,14 +287,14 @@ sudo add-apt-repository ppa:luke-jr/bitcoincore
     sleep 5
 
 
- cd /root/Docker-Pool-Install/yiimp/iniparser
-   sudo apt-get install gcc-7.5 gcc-7.5 g++-7.5 g++-7.5
+ cd /root/Docker-Pool-Install/yiimp/stratum/iniparser
+   sudo apt-get install gcc-7 gcc-7 g++-7 g++-7
   ./configure
 make
 make install
   cd /root/Docker-Pool-Install/yiimp/stratum
 
-   sudo apt-get install gcc-7.5 gcc-7.5 g++-7.5 g++-7.5
+   sudo apt-get install gcc-7 gcc-7 g++-7 g++-7
     output " Installing any libs we can need for Coleganet Pool"
     apt-get install libmysqlclient-dev
     apt install libnghttp2-dev librtmp-dev libssh2-1 libssh2-1-dev libldap2-dev libidn11-dev libpsl-dev
