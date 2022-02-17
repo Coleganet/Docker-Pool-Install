@@ -3,7 +3,7 @@ Install and Build Mining Pool for Any Cryptocurrency Altcoins and Algorithms on 
 ----------------
 That is the install scrypt inside of a docker container you can download the docker or just install your self
 No Mysql is include in this install scrypt the latest Mysql version is in the second docker container please use :
-install pool with docker-compose
+install pool with docker-compose .If you want MYSQL inside one single Docker Container just use the docker container coleganet/pool:V7Sql
 
 sudo su
 
