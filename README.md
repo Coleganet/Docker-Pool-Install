@@ -1,24 +1,40 @@
 # Coleganet-Install-Mining-Pool-Software UBUNTU 20.04
 Install and Build Mining Pool for Any Cryptocurrency Altcoins and Algorithms on Yiimp (Multi Coins/Algo Mining Pool Software)
 ----------------
-That is the install scrypt in a docker container you can download the docker or just install your self
-No Mysql is include in this install scrypt the latest is in the second docker container 
+That is the install scrypt inside of a docker container you can download the docker or just install your self
+No Mysql is include in this install scrypt the latest Mysql version is in the second docker container please use :
+install pool with docker-compose
+
+sudo su
+
+cd /home
+
+git clone https://github.com/Coleganet/Pool-base.git
+
+cd Pool-base
+
+bash install.sh
+
+That will install the latest version of docker-compose and start the crypto pool base in Yiimp
+
+you will get 2 docker containers 1 MySQL and 1 one is the pool and stratum server
+
+The docker container use supervisord please use supervidor for restart the applications
+
+Build and start with docker
+
 
 
 How Does it Work?
 ----------
 You will be required to get a VPS or cloud service like AWS instance etc or a server that can be obtained from several hosts online or if you have your very own server at your premises that can also be used to setup pool. For detailed minimum specifications and operating system that is usually Ubuntu/Linux,
-Install script for yiimp on Ubuntu Server 16.04 / 18.04 (use Tpruvot's Yiimp)
-USE THIS SCRIPT ON FRESH INSTALL UBUNTU Server 16.04 / 18.04 !
 
 Connect on your VPS =>
 Coleganet use a new theme and add mysql management inside the administration 
 apt upgrade
 
 ‼️ Kudaraidee Install Sources :
-Instead Tpruvot's Yiimp, you can use the Kudaraidee's Repo Yiimp : git clone -b Kudaraidee https://github.com/Kudaraidee/yiimp.git
-It's an updated Yiimp, with more algo, some fix....
-‼️ YOU MUST UPDATE THE FOLLOWING FILES :
+
 /var/web/serverconfig.php : update this file to include your public ip (line = YAAMP_ADMIN_IP) to access the admin panel (Put your PERSONNAL IP, NOT IP of your VPS). update with public keys from exchanges. update with other information specific to your server..
 /etc/yiimp/keys.php : update with secrect keys from the exchanges (not mandatory)
 If you want change 'AdminPanel' to access Panel Admin : Edit this file "/var/web/yaamp/modules/site/SiteController.php" and Line 11 => change 'AdminPanel'
