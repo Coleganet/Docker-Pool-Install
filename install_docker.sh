@@ -729,25 +729,6 @@ sudo chmod +x /var/stratum/config/run.sh
    sudo service php7.3-fpm reload
    fi
 
-    output " "
-    output "Now for the database fun!"
-    output " "
-    systemctl start mysql
-    sleep 3
-
-    # create database
-    Q1="CREATE DATABASE IF NOT EXISTS yiimpfrontend;"
-    Q2="GRANT ALL ON *.* TO 'panel'@'localhost' IDENTIFIED BY '$password';"
-    Q3="FLUSH PRIVILEGES;"
-    SQL="${Q1}${Q2}${Q3}"
-    sudo mysql -u root -p="" -e "$SQL"
-
-    # create stratum user
-    Q1="GRANT ALL ON *.* TO 'stratum'@'localhost' IDENTIFIED BY '$password2';"
-    Q2="FLUSH PRIVILEGES;"
-    SQL="${Q1}${Q2}"
-    sudo mysql -u root -p="" -e "$SQL"  
-
     #Create my.cnf
 
  echo '
@@ -981,9 +962,6 @@ output "Installing Apache Utils You will need for protect Admin folder with a pa
     echo
     echo -e "$CYAN Please make sure to change your public keys / wallet addresses in the /var/web/serverconfig.php file. $COL_RESET"
     echo -e "$CYAN Please make sure to change your private keys in the /etc/yiimp/keys.php file. $COL_RESET"
-    echo
-    echo -e "$CYAN TUTO Youtube : https://www.youtube.com/watch?v=qE0rhfJ1g2k $COL_RESET"
-    echo -e "$CYAN Xavatar WebSite : https://www.xavatar.com $COL_RESET"
     echo
     echo
     echo -e "$RED***************************************************$COL_RESET"
